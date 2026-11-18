@@ -14,6 +14,16 @@
     </style>
   </head>
   <body>
+    <section id="site-intro" class="site-intro" role="dialog" aria-modal="true" aria-label="EMPACT introduction">
+      <video id="intro-video" class="site-intro-video" muted playsinline preload="auto" aria-label="Animated EMPACT logo introduction">
+        <source src="empact-logo-intro.mp4" type="video/mp4" />
+      </video>
+      <div class="site-intro-overlay" aria-hidden="true"></div>
+      <div class="site-intro-copy">
+        <p>Emergency medicine, together.</p>
+        <button id="skip-intro" class="skip-intro" type="button">Skip intro <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="brand brand-logo" href="#top" aria-label="EMPACT home">
