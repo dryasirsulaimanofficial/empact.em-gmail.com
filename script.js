@@ -20,6 +20,7 @@ const skipIntro = document.querySelector('#skip-intro');
 
 if (intro && introVideo && skipIntro) {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const forceIntro = new URLSearchParams(window.location.search).get('intro') === '1';
   let alreadyShown = false;
 
   try {
@@ -37,7 +38,7 @@ if (intro && introVideo && skipIntro) {
     }
   };
 
-  if (prefersReducedMotion || alreadyShown) {
+  if (!forceIntro && (prefersReducedMotion || alreadyShown)) {
     closeIntro();
   } else {
     introVideo.play().catch(() => {});
